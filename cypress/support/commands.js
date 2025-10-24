@@ -23,3 +23,24 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import loginActions from "../pageObjects/login/Actions.cy";
+import logoutActions from "../pageObjects/logout/Actions.cy";
+
+const loginactions = new loginActions();
+const logoutactions = new logoutActions();
+Cypress.Commands.add('loginToOrangeHRM',(username , password)=>{
+    cy.visit("/auth/login");
+    cy.url().should('include', '/auth/login');
+    loginactions.typeInUserName(username);
+    loginactions.typeInPassword(password);
+    loginactions.clickOnLoginButton();
+
+});
+
+Cypress.Commands.add('logout',()=>{
+
+    logoutactions.clickOnLogoutMenu();
+    logoutactions.clickOnLogoutOption();
+
+})
