@@ -1,0 +1,26 @@
+[
+    {
+    "expenseType": "Accommodation",
+    "date": "2025-10-27",
+    "amount": 120.00,
+    "note": "Hotel stay for conference"
+  },
+  {
+    "expenseType": "Fuel Allowance",
+    "date": "2025-10-25",
+    "amount": 50.00,
+    "note": "Fuel reimbursement for travel"
+  },
+  {
+    "expenseType": "Planned Surgery",
+    "date": "2025-09-30",
+    "amount": 300.00,
+    "note": "Surgery scheduled at hospital"
+  },
+  {
+    "expenseType": "Transport",
+    "date": "2025-10-20",
+    "amount": 40.00,
+    "note": "Taxi from airport"
+  }
+]
