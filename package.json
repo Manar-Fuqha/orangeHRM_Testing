@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Manar-Fuqha/orangeHRM_Testing#readme",
   "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
     "cypress": "^15.5.0"
   }
 }
