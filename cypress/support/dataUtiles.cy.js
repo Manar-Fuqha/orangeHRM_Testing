@@ -1,4 +1,8 @@
+import entitlementApi from "./utils/api/leave/entitlement/entitlementApi.cy";
+import leaveTypesApi from "./utils/api/leave/leaveTypesApi.cy";
 import employeeApi from "./utils/api/pim/employee/employeeApi.cy";
+import entitlementFactory from "./utils/factories/leave/entitlement/entitlementFactory.cy";
+import leaveFactory from "./utils/factories/leave/leaveFactory.cy";
 import { employeeFactory } from "./utils/factories/pim/employee/employeeFactory.cy";
 
 class dataUtiles{
@@ -16,6 +20,47 @@ class dataUtiles{
          return cy.wrap(arr);
 
 
+    }
+
+    addLoginDetails(data={}){
+            return employeeApi.addLoginDetails(
+                    data
+        )
+        .then((response)=>{
+            return response.body.data;
+        })
+        
+    }
+
+    deleteEmployees(data){
+        return employeeApi.deleteEmployees(data);
+    }
+
+    addLeaveEntitlemet(data={}){
+            return entitlementApi.addLeaveEntitlement(
+                entitlementFactory.addLeaveEntitlemet(data)
+            );
+    }
+
+    addLeaveType(data={}){
+        return leaveTypesApi.addLeaveType(
+            leaveFactory.addLeaveTypeInfo(data)
+        );
+    }
+
+    getAllLeaveTypes(){
+        return leaveTypesApi.getLeaveTypes();
+    }
+    getRandomLeaveType(){
+        return leaveTypesApi.getLeaveTypes().then((response) => {
+        const leaveTypes = response.body.data;
+        const randomLeave =leaveTypes[Math.floor(Math.random() * leaveTypes.length)];
+        return randomLeave;
+        });
+    }
+
+    deleteLeaveTypes(ids){
+        return leaveTypesApi.deleteLeaveTypes(ids);
     }
 
     
