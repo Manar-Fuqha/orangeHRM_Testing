@@ -1,0 +1,24 @@
+{
+  "name": "orangehrm_testing",
+  "version": "1.0.0",
+  "description": "This project is a **Cypress training demo** using [OrangeHRM](https://www.orangehrm.com/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manar-Fuqha/orangeHRM_Testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manar-Fuqha/orangeHRM_Testing/issues"
+  },
+  "homepage": "https://github.com/Manar-Fuqha/orangeHRM_Testing#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "cypress": "^15.5.0"
+  }
+}
